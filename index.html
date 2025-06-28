@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background-color: black;
+            color:white;
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height:80px;
+            width:100%;
+            background-color: rgb(18,18,62);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        nav ul li a:hover{
+            color: rgb(170, 107, 228);
+            font-size:1.06rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+        .firstSection{
+            display:flex;
+            justify-content:space-around;
+            margin:120px 0px;
+            align-items:center;
+        }
+        .firstSection > div{
+            width:40%;
+        }
+        .leftSection{
+            font-size:3rem;
+            margin-left:150px;
+            
+        }
+        .leftSection .buttons{
+            padding:50px 0px;
+        }
+        .btn-1{
+            padding:8px;
+            color:white;
+            background: #9c97f1;
+            border:2px solid white;
+            border-radius:6px;
+            font-size:20px;
+            cursor:pointer;
+        }
+        .btn-1:hover{
+            background: #1e2167;
+        }
+        .btn-2{
+            padding:8px;
+            color:white;
+            background: #1e2167;
+            border:2px solid white;
+            border-radius:6px;
+            font-size:20px;
+            cursor:pointer;
+        }
+        .btn-2:hover{
+            background: #9c97f1;
+        }
+        .rightSection {
+            position: relative;
+            width: 250px;
+            height: 300px;
+            display: inline-block;
+            
+        }
+        .rightSection img{
+            vertical-align: middle;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+        .rightSection::after, .rightSection::before{
+            content :"";
+            position: absolute;
+            height:300px;
+            width:300px;
+            background-image: conic-gradient(#1e2167,darkblue,violet,rgb(170, 107, 228),#1e2167);
+            top:50%;
+            left:50%;
+            margin-left: -310px;
+            margin-top: -150px;
+            z-index: -1;
+            padding: 3px;
+            border-radius: 50%;
+            animation: spinGlow 6s linear infinite;
+        }
+        @keyframes spinGlow {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .rightSection::before{
+             filter: blur(1.5rem);
+             opacity:1.5;
+        }
+        .purple{
+            color: rgb(170, 107, 228);
+        }
+        #element{
+            color:rgb(170, 107, 228);
+        }
+        .secondSection{
+           max-width: 80vw;
+           margin: auto;
+        }
+        
+        main hr{
+            border:0;
+            background: #9c97f1;
+            height:1.2px;
+            margin:40px 84px;
+        }
+        .secondSection h1{
+            margin-left:45px;
+            margin-top: 20px;
+        }
+        footer{
+            background-color: #0e0e1a;
+        }
+        .footer{
+            display:flex;
+            margin-left: 25px;
+            padding:23px 122px;
+            justify-content: space-evenly;
+            margin:20px;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer ul li{
+            margin:10px;
+        }
+        .footer > div{
+            width:233px;
+        }
+        footer .footer-right{
+            text-align: center;
+            color:gray;
+            padding:12px;
+        }
+        .footer .third{
+            margin-top: 10px;
+            cursor:pointer;
+            
+        }
+        .footer .four{
+          
+            cursor:pointer;
+            
+        }
+        @media screen and (max-width: 1200px){
+            body{
+                align-items: center;
+            }
+            nav {
+                padding: 10px 20px;
+                height: auto;
+                overflow-x: auto;
+            }
+
+            nav ul {
+                gap: 10px;
+                flex-wrap: nowrap;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+            }
+
+            .left {
+                font-size: 1.3rem;
+            }
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px 10px;
+                gap: 20px; /* spacing between footer sections */
+            }
+
+            .footer > div {
+                width: 90%; /* full width on mobile with margin */
+                margin: 10px 0;
+            }
+
+            .footer ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            .footer ul li {
+                margin: 8px 0; /* vertical spacing between list items */
+            }
+
+            .footer ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+            }
+
+            .footer ul li a:hover {
+                color: rgb(170, 107, 228);
+            }
+
+            .footer-right {
+                font-size: 13px;
+                color: gray;
+                padding: 10px;
+                margin-top: 10px;
+                border-top: 1px solid #444;
+                width: 100%;
+                text-align: center;
+            }
+            .firstSection {
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 80px 0;
+                gap: 30px; /* adds spacing between image and text */
+            }
+
+            .leftSection {
+                font-size: 1.8rem;
+                margin-top: 15px;
+                margin-left: 0; /* remove extra left margin */
+                width: 90%;
+            }
+
+            .rightSection {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .rightSection img {
+                width: 100%;
+                max-width: 300px;
+                margin-left: 5px;
+                border-radius: 50%;
+                border: 2px solid #1e2167;
+            }
+            .rightSection {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+            }
+
+            .rightSection img {
+                width: 230px;
+                height: 210px;
+                border-radius: 50%;
+                z-index: 2;
+                position: relative;
+                border:12px solid #1e2167;
+            }
+
+            .rightSection::before,
+            .rightSection::after {
+                display: none; /* removes glow ring and blur */
+            }
+            .firstSection{
+                flex-direction: column-reverse;
+            }
+            .leftSection{
+                font-size: 1.8rem;
+                margin-top: 15px;  
+            }
+            nav{
+                flex-direction: column;
+            }
+            .rightSection{
+                margin-left:0px;
+            }
+            
+            .leftSection .buttons {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                gap: 10px;
+                padding: 20px 0;
+            }
+
+            .btn-1, .btn-2 {
+                height: 40px;
+                width: 200px;
+                font-size: 16px;
+                border-radius: 6px;
+                padding: 8px;
+            }
+            .btn-1:hover {
+                background: #1e2167;
+            }
+            .btn-2:hover {
+                background: #9c97f1;
+            }
+            
+
+        }
+        @media screen and (max-width: 400px) {
+        nav {
+            padding: 8px 10px;
+            overflow-x: auto; /* enables horizontal scroll if needed */
+        }
+
+        nav ul {
+            gap: 10px;
+            flex-wrap: nowrap; /* no wrapping, stay in a line */
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            font-size: 0.75rem; /* shrink font to fit all items */
+            padding: 4px;
+        }
+
+        .left {
+            font-size: 1rem; /* logo title also shrinks */
+            white-space: nowrap;
+        }
+
+        nav .right ul {
+            justify-content: flex-start;
+        }
+        .firstSection {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 50px 0;
+            gap: 20px;
+        }
+
+        .rightSection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+        }
+
+        .rightSection img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            z-index: 2;
+            border:12px solid #9c97f1;
+        }
+
+        .rightSection::before,
+        .rightSection::after {
+            display: none !important;
+        }
+
+        .leftSection {
+            font-size: 1.5rem;
+            padding: 0 15px;
+            width: 100%;
+        }
+
+        .leftSection .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .btn-1, .btn-2 {
+            width: 200px;
+            height: 40px;
+            font-size: 16px;
+        }
+        .rightSection {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightSection img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border:12px solid #1e2167;
+            z-index: 2;
+            position: relative;
+        }
+
+        .rightSection::before,
+        .rightSection::after {
+            display: none; /* removes glow ring and blur */
+        }
+    }
+            
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Gayatri's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hi,My name is
+                <span class="purple">Gayatri</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn-1">Download Resume</button>
+                    <button class="btn-2">GitHub</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="myimg.jpg" alt="img">
+            </div>
+        </section>
+ <hr>
+        <section class="secondSection">
+           
+           
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="first">
+                <h3>Gayatri's Developer Portfolio</h3>
+            </div>
+            <div class="second">
+              <ul>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Skills</a></li>
+                <li><a>Projects</a></li>
+                <li><a>Contacts</a></li>
+              </ul>
+            </div>
+            <div class="third">
+              <ul>
+                
+                <li><a><i style="font-size:24px" class="fa">&#xf08c;</i>&nbsp;&nbsp;Linked-in</a></li>
+                <li><a><i style="font-size:24px" class="fa">&#xf095;</i>&nbsp;&nbsp;+91 XXXXXXXXXX</a></li>
+                 <li><a><i class="material-icons">&#xe158;</i>&nbsp;&nbsp;G-Mail</a></li>
+              </ul>
+            </div>
+            <div class="four">
+               <ul>
+                <li><a>Leetcode</a></li>
+                <li><a>Hackerrank</a></li>
+                <li><a>Codechef</a></li>
+                <li><a>Hackerearth</a></li>
+                <li><a>Codeforces</a></li>
+              </ul>
+            </div>
+        </div>
+         <div class="footer-right">
+           Copyright &#169; www.Gayatrisportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Web Designer'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>

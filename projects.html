@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Poetsen One", sans-serif;
+            font-weight: 400;
+        }
+         nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height:80px;
+            width:100%;
+            background-color: rgb(18,18,62);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        nav ul li a:hover{
+            color: rgb(170, 107, 228);
+            font-size:1.06rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 80px;
+            font-size: 2rem;
+        }
+
+        hr {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid rgb(170, 107, 228);
+        }
+
+        .flip-card-one,
+        .flip-card-two {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px auto;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .card-1,
+        .card-2,
+        .card-3,
+        .card-4 {
+            flex: 1 1 45%;
+            max-width: 450px;
+            height: auto;
+            background: transparent;
+            color: rgb(170, 107, 228);
+            text-align: center;
+            font-size: large;
+            text-decoration: underline;
+            padding: 10px;
+            transition: 0.3s;
+        }
+
+        .card-1:hover,
+        .card-2:hover,
+        .card-3:hover,
+        .card-4:hover {
+            background-color: rgb(170, 107, 228);
+            color: white;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        /* ✅ Responsive layout for small screens */
+        @media screen and (max-width: 600px) {
+            .flip-card-one,
+            .flip-card-two {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-1,
+            .card-2,
+            .card-3,
+            .card-4 {
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+        @media screen and (max-width: 400px) {
+        nav {
+            padding: 8px 10px;
+            overflow-x: auto; /* enables horizontal scroll if needed */
+        }
+
+        nav ul {
+            gap: 10px;
+            flex-wrap: nowrap; /* no wrapping, stay in a line */
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            font-size: 0.75rem; /* shrink font to fit all items */
+            padding: 4px;
+        }
+
+        .left {
+            font-size: 1rem; /* logo title also shrinks */
+            white-space: nowrap;
+        }
+
+        nav .right ul {
+            justify-content: flex-start;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Gayatri's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1>My Projects</h1>
+        <hr>
+    </main>
+    <main>
+        <section class="flip-card-one">
+            <div class="card-1">
+                <p>Landing-page</p>
+                <video width="100%" height="300px" poster="poster-1.png" controls>
+                    <source src="Landing-page.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="card-2">
+                <p>Rock-Paper-Scissors</p>
+                <video width="100%" height="300px" poster="poster-2.png" controls>
+                    <source src="rock-paper-scissors.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section class="flip-card-two">
+            <div class="card-3">
+                <p>Java Guessing-Number</p>
+                <video width="100%" height="300px" controls>
+                    <source src="task-1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="card-4">
+                <p>Java Rock-Paper-Scissors</p>
+                <video width="100%" height="300px" controls>
+                    <source src="task-2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

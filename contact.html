@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+                background-color: black;
+                color: white;
+                font-family: "Poetsen One", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                margin: 0;
+                padding: 0;
+            }
+             nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height:80px;
+            width:100%;
+            background-color: rgb(18,18,62);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        nav ul li a:hover{
+            color: rgb(170, 107, 228);
+            font-size:1.06rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+
+            main {
+                margin-top: 80px;
+            }
+
+            main h1 {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            hr {
+                border: none;
+                height: 2px;
+                background: rgb(170, 107, 228);
+                width: 80%;
+                margin: 20px auto;
+            }
+
+            .sec-1 {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            input[type="text"], input[type="submit"] {
+                width: 80%;
+                max-width: 500px;
+                height: 30px;
+                border: 2px solid rgb(170, 107, 228);
+                border-radius: 10px;
+                padding: 8px;
+                font-size: 1rem;
+            }
+
+            #input-3 {
+                height: 60px;
+            }
+
+            input[type="submit"] {
+                background-color: rgb(170, 107, 228);
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:hover {
+                box-shadow: 5px 5px 8px rgb(170, 107, 228), 10px 10px 8px whitesmoke inset;
+                color: rgb(170, 107, 228);
+                background-color: white;
+            }
+
+            /* ✅ Optional: Mobile font tweak */
+            @media screen and (max-width: 400px) {
+                main h1 {
+                    font-size: 1.5rem;
+                }
+
+                input[type="text"], input[type="submit"] {
+                    font-size: 0.9rem;
+                }
+            }
+            @media screen and (max-width: 400px) {
+        nav {
+            padding: 8px 10px;
+            overflow-x: auto; /* enables horizontal scroll if needed */
+        }
+
+        nav ul {
+            gap: 10px;
+            flex-wrap: nowrap; /* no wrapping, stay in a line */
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            font-size: 0.75rem; /* shrink font to fit all items */
+            padding: 4px;
+        }
+
+        .left {
+            font-size: 1rem; /* logo title also shrinks */
+            white-space: nowrap;
+        }
+
+        nav .right ul {
+            justify-content: flex-start;
+        }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Gayatri's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1>Contacts</h1>
+        <hr>
+    </main>
+    <main class="main-1">
+        <section class="sec-1">
+            <input type="text" placeholder="Full Name..." id="input-1">
+            <br>
+            <input type="text" placeholder="Full Email-id..." id="input-1">
+            <br>
+            <input type="text" placeholder="Full PhoneNo..." id="input-1">
+            <br>
+            <input type="text" placeholder="Enter Address..." id="input-3">
+            <br>
+            <input type="submit">
+            
+        </section>
+    </main>
+</body>
+</html>
