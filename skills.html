@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        background-color: black;
+        color: white;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        }
+         nav{
+            display: flex;
+            justify-content:space-around;
+            align-items:center;
+            height:80px;
+            width:100%;
+            background-color: rgb(18,18,62);
+        }
+        nav ul{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+        }
+        nav ul li{
+            list-style: none;
+            margin:0px 23px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:white;
+        }
+        nav ul li a:hover{
+            color: rgb(170, 107, 228);
+            font-size:1.06rem;
+        }
+        .left{
+            font-size: 1.5rem;
+        }
+
+        main {
+        margin-top: 80px;
+        padding: 0 20px;
+        }
+
+        #element {
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgb(170, 107, 228);
+        margin-bottom: 10px;
+        }
+
+        h1 {
+        text-align: center;
+        font-size: 2rem;
+        }
+
+        hr {
+        border: 2px solid rgb(170, 107, 228);
+        max-width: 80vw;
+        margin: 20px auto 50px;
+        }
+        .typed-container {
+        text-align: center;
+        margin-bottom: 10px;
+        }
+
+        #element {
+        display: inline;
+        color: rgb(170, 107, 228);
+        font-size: 1.2rem;
+        }
+
+        .text {
+        text-align: center;
+        margin: 0 auto 40px;
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+        max-width: 800px;
+        }
+
+        .main-1 {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 40px;
+        }
+
+        .left-side,
+        .right-side {
+        width: 100%;
+        max-width: 400px;
+        }
+
+        .left-side p,
+        .right-side p {
+        margin-bottom: 8px;
+        }
+
+        .container {
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        }
+
+        .skills {
+        text-align: right;
+        padding: 10px;
+        color: white;
+        font-size: 1rem;
+        border-radius: 20px;
+        }
+
+        .html { width: 90%; background-color: rgb(170, 107, 228); }
+        .css { width: 80%; background-color: rgb(170, 107, 228); }
+        .js { width: 65%; background-color: rgb(170, 107, 228); }
+
+        
+        @media screen and (max-width: 500px) {
+        #element {
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .text {
+            font-size: 0.9rem;
+            padding: 0 10px;
+        }
+
+        .skills {
+            font-size: 0.9rem;
+        }
+        }
+        @media screen and (max-width: 400px) {
+        nav {
+            padding: 8px 10px;
+            overflow-x: auto; 
+        }
+
+        nav ul {
+            gap: 10px;
+            flex-wrap: nowrap; 
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            font-size: 0.75rem; 
+            padding: 4px;
+        }
+
+        .left {
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        nav .right ul {
+            justify-content: flex-start;
+        }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="left">Gayatri's Portfolio</div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <div class="typed-container">
+        <span id="element"></span>
+    </div>
+        <h1>My Skills</h1>
+        <hr>
+        <p class="text">I have a strong foundation in Java, Python, and frontend web development with HTML, CSS, and JavaScript. I’m currently exploring Data Structures, DBMS, OS, and Python<br> for Data Science. I enjoy building real-time projects like chat apps and management systems. My adaptability and eagerness to learn help me grow continuously as a future software developer.
+
+</p>
+        <main class="main-1">
+        <section class="left-side">
+                    <p>HTML</p>
+        <div class="container">
+        <div class="skills html">90%</div>
+        </div>
+
+        <p>CSS</p>
+        <div class="container">
+        <div class="skills css">80%</div>
+        </div>
+
+        <p>JavaScript</p>
+        <div class="container">
+        <div class="skills js">65%</div>
+        </div>
+        </section>
+        <section class="right-side">
+            <p>JAVA</p>
+        <div class="container">
+        <div class="skills html">90%</div>
+        </div>
+
+        <p>PYTHON</p>
+        <div class="container">
+        <div class="skills css">80%</div>
+        </div>
+        <p>C</p>
+        <div class="container">
+        <div class="skills js">65%</div>
+        </div>
+        </section>
+        </main>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+    var typed = new Typed('#element', {
+      strings: ['Discover'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>
